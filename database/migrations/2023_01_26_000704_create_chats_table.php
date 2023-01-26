@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('chats', function (Blueprint $table) {
-            $table->uuid('id');
+            $table->uuid('id')->primary();
             $table->integer('sender_id');
             $table->text('body');
             $table->boolean('is_read')->default(false);
