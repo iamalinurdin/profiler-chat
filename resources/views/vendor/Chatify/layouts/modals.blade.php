@@ -46,6 +46,7 @@
                           Upload New
                           <input class="upload-avatar chatify-d-none" accept="image/*" name="avatar" type="file" />
                       </label>
+                      <br>
                       {{-- Dark/Light Mode  --}}
                       <p class="divider"></p>
                       <p class="app-modal-header">Dark Mode <span class="
@@ -68,6 +69,16 @@
                       <input type="submit" class="app-btn a-btn-success update" value="Save Changes" />
                   </div>
               </form>
+              <p class="divider"></p>
+              <a class="app-btn a-btn-danger update" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
           </div>
       </div>
   </div>
