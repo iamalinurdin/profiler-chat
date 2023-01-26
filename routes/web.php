@@ -18,7 +18,7 @@ Route::get('/', function () {
     return redirect('/chatify');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', function () {
     return redirect('/chatify');
